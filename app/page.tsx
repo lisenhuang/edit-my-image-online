@@ -248,7 +248,7 @@ export default function ImageEditor() {
         // 计算显示比例
         const scaleX = displayedWidth / imageWidth
         const scaleY = displayedHeight / imageHeight
-        
+
         // 计算实际的像素尺寸
         const actualWidth = Math.round(width / scaleX)
         const actualHeight = Math.round(height / scaleY)
@@ -1087,7 +1087,7 @@ export default function ImageEditor() {
               asChild
             >
               <a
-                href="https://github.com/chismo950/edit-my-image-online"
+                href="https://github.com/lisenhuang/edit-my-image-online"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1307,11 +1307,10 @@ export default function ImageEditor() {
                         {textElements.map((textEl) => (
                           <div
                             key={textEl.id}
-                            className={`p-2 border rounded-md cursor-pointer text-sm truncate ${
-                              selectedTextId === textEl.id
+                            className={`p-2 border rounded-md cursor-pointer text-sm truncate ${selectedTextId === textEl.id
                                 ? "border-blue-500 bg-blue-50 dark:bg-blue-950 dark:border-blue-400"
                                 : ""
-                            }`}
+                              }`}
                             onClick={() => setSelectedTextId(textEl.id)}
                             style={{ color: textEl.color }}
                           >
